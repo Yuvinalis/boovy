@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Light Polaris Dashboard Tokens */
+  --color-polaris-bg: #F6F6F7;
+  --color-polaris-surface: #FFFFFF;
+  --color-polaris-border: #E1E3E5;
+  --color-polaris-text: #202223;
+  --color-polaris-muted: #6D7175;
+  --color-polaris-primary: #008060;
+  --color-polaris-primary-hover: #006E52;
+  --color-polaris-indigo: #5C6AC4;
+
+  /* Dark Studio Editor Tokens */
+  --color-studio-bg: #0B0C0E;
+  --color-studio-panel: #14161A;
+  --color-studio-elevated: #1D2026;
+  --color-studio-border: #262930;
+  --color-studio-text: #F1F2F4;
+  --color-studio-muted: #8C9196;
+  --color-studio-playhead: #00A47C;
+  --color-studio-keyframe: #F49342;
+  --color-studio-selection: #5C6AC4;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-polaris-bg);
+    color: var(--color-polaris-text);
+    margin: 0;
+  }
+}
+
+.font-timecode {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle studio scrollbars */
+.studio-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.studio-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.studio-scroll::-webkit-scrollbar-thumb {
+  background: #2C3038;
+  border-radius: 9999px;
+}
+.studio-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3E4450;
+}
